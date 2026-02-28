@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore world destinations with MTST Travel. Filter destination styles and find premium global experiences." />
+  <title>Destinations | MTST Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="bg-wave wave-1"></span><span class="bg-wave wave-2"></span><span class="bg-shape s1"></span><span class="bg-shape s2"></span><span class="bg-shape s3"></span><canvas class="particle-canvas"></canvas>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">MTST <span>Travel</span></a>
+      <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="destinations.html">Destinations</a>
+        <a href="tours.html">Tours</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="nav-cta" href="contact.html">Plan My Trip</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="min-height:72vh">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata"  aria-label="International travel destinations video">
+        <source src="videos/1394254-hd_1366_720_24fps.mp4" type="video/mp4" />
+
+      </video>
+      <div class="hero-content">
+        <h1 class="hero-title split-words">Explore Premium Global Destinations</h1>
+        <p class="hero-subtitle">From alpine villages to tropical coastlines, discover curated locations built for memorable international travel.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <p class="kicker">Destination Filter</p>
+        <h2 class="section-title">Choose Your Travel Mood</h2>
+        <div class="filter-tabs" role="tablist" aria-label="Destination filters">
+          <button class="tab-btn active" data-filter="all" type="button">All</button>
+          <button class="tab-btn" data-filter="beach" type="button">Beach</button>
+          <button class="tab-btn" data-filter="city" type="button">City</button>
+          <button class="tab-btn" data-filter="nature" type="button">Nature</button>
+          <button class="tab-btn" data-filter="luxury" type="button">Luxury</button>
+        </div>
+        <div class="dest-grid">
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?q=80&w=800&auto=format&fit=crop" alt="Bora Bora" /><div class="destination-info"><h3>Bora Bora</h3><p>French Polynesia</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop" alt="Singapore" /><div class="destination-info"><h3>Singapore</h3><p>Future city break</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=800&auto=format&fit=crop" alt="Norway fjords" /><div class="destination-info"><h3>Norway Fjords</h3><p>Nature immersion</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Monaco" /><div class="destination-info"><h3>Monaco</h3><p>Luxury coast</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=800&auto=format&fit=crop" alt="Phuket" /><div class="destination-info"><h3>Phuket</h3><p>Tropical blue bays</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop" alt="London" /><div class="destination-info"><h3>London</h3><p>Heritage and modernity</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Banff" /><div class="destination-info"><h3>Banff</h3><p>Mountain serenity</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="https://images.unsplash.com/photo-1505664063603-28e48ca204eb?q=80&w=800&auto=format&fit=crop" alt="Abu Dhabi" /><div class="destination-info"><h3>Abu Dhabi</h3><p>Refined luxury</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="https://images.unsplash.com/photo-1540206395-68808572332f?q=80&w=800&auto=format&fit=crop" alt="Seychelles" /><div class="destination-info"><h3>Seychelles</h3><p>Crystal lagoons</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?q=80&w=800&auto=format&fit=crop" alt="Seoul" /><div class="destination-info"><h3>Seoul</h3><p>Creative metropolis</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="https://images.unsplash.com/photo-1431274172761-fca41d930114?q=80&w=800&auto=format&fit=crop" alt="Iceland" /><div class="destination-info"><h3>Iceland</h3><p>Glaciers and lights</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=800&auto=format&fit=crop" alt="Maldives" /><div class="destination-info"><h3>Maldives</h3><p>Private villa paradise</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <p class="kicker">Popular Cities</p>
+        <h2 class="section-title">Most Requested Urban Highlights</h2>
+        <div class="city-grid">
+          <article class="city-chip card">Paris</article>
+          <article class="city-chip card">Tokyo</article>
+          <article class="city-chip card">Dubai</article>
+          <article class="city-chip card">New York</article>
+          <article class="city-chip card">Rome</article>
+          <article class="city-chip card">Singapore</article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <p class="kicker">Travel Tips</p>
+        <h2 class="section-title">Smart Planning For International Trips</h2>
+        <div class="tips-grid">
+          <article class="tip-card card"><div class="card-body"><h3>Visa Timing</h3><p class="section-subtitle">Apply early and keep digital + printed copies of all travel documents.</p></div></article>
+          <article class="tip-card card"><div class="card-body"><h3>Local Currency</h3><p class="section-subtitle">Carry a balanced mix of card access and local cash for convenience.</p></div></article>
+          <article class="tip-card card"><div class="card-body"><h3>Travel Insurance</h3><p class="section-subtitle">Protect your journey with reliable global coverage before departure.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <article class="cta-banner">
+          <div>
+            <p class="kicker">Booking Time</p>
+            <h2 class="section-title" style="margin:0">Ready To Reserve Your Destination?</h2>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Start Booking</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <p class="kicker">FAQ</p>
+        <h2 class="section-title">Destination Questions</h2>
+        <div class="accordion">
+          <article class="faq-item"><button class="faq-btn" type="button" aria-expanded="false">Can I customize destination itineraries? <i class="fa-solid fa-plus"></i></button><div class="faq-panel"><p>Yes. MTST Travel customizes hotels, activities, flight windows, and transport preferences.</p></div></article>
+          <article class="faq-item"><button class="faq-btn" type="button" aria-expanded="false">Do you support group destination planning? <i class="fa-solid fa-plus"></i></button><div class="faq-panel"><p>Yes. We manage family groups, corporate incentives, and celebration trips with dedicated coordinators.</p></div></article>
+          <article class="faq-item"><button class="faq-btn" type="button" aria-expanded="false">Are visa support services included? <i class="fa-solid fa-plus"></i></button><div class="faq-panel"><p>Visa guidance is available as an add-on depending on destination rules and package tier.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h4>About MTST Travel</h4><p>Global destination experts delivering premium travel experiences with detail-first planning.</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="tours.html">Tours</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Tours</h4><ul><li><a href="tours.html">Luxury Europe</a></li><li><a href="tours.html">Island Escapes</a></li><li><a href="tours.html">Family Tours</a></li><li><a href="tours.html">Business Leisure</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>+94 9005 3646</li><li>hello@mtsttravel.com</li><li>Global Assistance 24/7</li></ul></div>
+      <div><h4>Social</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li><li><a href="#">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom">(c) 2026 MTST Travel. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Santorini">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8dc8f2"/>
+      <stop offset="100%" stop-color="#2a7bb2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#f5fbff"/>
+  <rect y="430" width="1200" height="370" fill="url(#sea)"/>
+  <rect x="170" y="250" width="210" height="220" rx="12" fill="#ffffff"/>
+  <rect x="420" y="220" width="260" height="250" rx="12" fill="#ffffff"/>
+  <rect x="730" y="270" width="250" height="200" rx="12" fill="#ffffff"/>
+  <circle cx="300" cy="250" r="82" fill="#0d3b66"/>
+  <circle cx="550" cy="220" r="88" fill="#0d3b66"/>
+  <circle cx="850" cy="270" r="74" fill="#0d3b66"/>
+  <text x="60" y="760" font-family="Inter, Arial, sans-serif" font-size="56" fill="#0d3b66" opacity="0.75">Santorini</text>
+</svg>

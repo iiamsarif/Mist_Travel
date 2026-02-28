@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MTST Travel delivers ultra-premium international tours, luxury experiences, and trusted travel planning worldwide." />
+  <title>MTST Travel | Luxury International Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="bg-wave wave-1"></span>
+    <span class="bg-wave wave-2"></span>
+    <span class="bg-shape s1"></span>
+    <span class="bg-shape s2"></span>
+    <span class="bg-shape s3"></span>
+    <canvas class="particle-canvas"></canvas>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">MTST <span>Travel</span></a>
+      <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="tours.html">Tours</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="nav-cta" href="contact.html">Plan My Trip</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" >
+        <source src="videos/3015510-hd_1920_1080_24fps.mp4" type="video/mp4" />
+      
+      </video>
+      <div class="hero-content">
+        <h1 class="hero-title split-words">Explore The World With MTST Travel</h1>
+        <p class="hero-subtitle">Curated luxury journeys across iconic cities, hidden islands, and elite destinations with seamless, trusted service from departure to return.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#featured">Explore Tours</a>
+          <a class="btn btn-outline" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured">
+      <div class="container reveal">
+        <p class="kicker">Featured Destinations</p>
+        <h2 class="section-title">Signature Places Across Continents</h2>
+        <p class="section-subtitle">Handpicked international escapes crafted for comfort, elegance, and unforgettable cultural immersion.</p>
+        <div class="destination-grid">
+          <article class="destination-card card tilt-card"><img loading="lazy" src="http://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?_gl=1*1jw1oan*_ga*NDc1NDU4MTU5LjE3NzE4MTkxMTQ.*_ga_8JE65Q40S6*czE3NzIyNjQxMTEkbzEzJGcxJHQxNzcyMjY2MDQ2JGo0NSRsMCRoMA.." alt="Swiss Alps" /><div class="destination-info"><h3>Swiss Alps</h3><p>Snow luxury retreats</p></div></article>
+          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=900&auto=format&fit=crop" alt="Tokyo city lights" /><div class="destination-info"><h3>Tokyo</h3><p>Neon + tradition</p></div></article>
+          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=900&auto=format&fit=crop" alt="Paris Eiffel Tower" /><div class="destination-info"><h3>Paris</h3><p>Iconic romance</p></div></article>
+          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.pexels.com/photos/1172105/pexels-photo-1172105.jpeg?_gl=1*vpxc5l*_ga*NDc1NDU4MTU5LjE3NzE4MTkxMTQ.*_ga_8JE65Q40S6*czE3NzIyNjQxMTEkbzEzJGcxJHQxNzcyMjY2MDQ2JGo0NSRsMCRoMA.." alt="Santorini white village" /><div class="destination-info"><h3>Santorini</h3><p>Aegean sunsets</p></div></article>
+          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=900&auto=format&fit=crop" alt="Dubai skyline" /><div class="destination-info"><h3>Dubai</h3><p>Urban grandeur</p></div></article>
+          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=900&auto=format&fit=crop" alt="Bali beach and resort" /><div class="destination-info"><h3>Bali</h3><p>Tropical wellness</p></div></article>
+          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=900&auto=format&fit=crop" alt="New York skyline" /><div class="destination-info"><h3>New York</h3><p>City prestige</p></div></article>
+          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=900&auto=format&fit=crop" alt="Venice canals" /><div class="destination-info"><h3>Venice</h3><p>Classic waterways</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-wrap">
+        <figure class="about-media reveal parallax-layer" data-speed="0.18"><img loading="lazy" src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?q=80&w=1200&auto=format&fit=crop" alt="Luxury couple traveling" /></figure>
+        <div class="about-content reveal">
+          <p class="kicker">About MTST Travel</p>
+          <h2 class="section-title">International Travel, Elevated</h2>
+          <p>MTST Travel is a premium travel house focused on world-class planning, transparent service, and curated luxury itineraries. From private airport pickups to five-star stays and guided local experiences, every trip is designed to feel effortless and refined.</p>
+          <p>Our team combines destination expertise and global network partners to create journeys with confidence, comfort, and style.</p>
+          <a class="btn btn-primary" href="tours.html">View Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <p class="kicker">Why Choose Us</p>
+        <h2 class="section-title">Trusted by Global Travelers</h2>
+        <div class="icon-grid">
+          <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-earth-americas"></i></div><h3>Worldwide Coverage</h3><p>Destinations across Europe, Asia, Americas, and beyond.</p></article>
+          <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-shield-heart"></i></div><h3>Secure Booking</h3><p>Transparent pricing and safe payment processing.</p></article>
+          <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-crown"></i></div><h3>Luxury Curation</h3><p>Hand-selected stays, transfers, and experiences.</p></article>
+          <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-headset"></i></div><h3>24/7 Support</h3><p>Dedicated travel assistance whenever you need us.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <p class="kicker">Popular Tour Packages</p>
+        <h2 class="section-title">Top Selling Luxury Routes</h2>
+        <div class="package-grid">
+          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop" alt="Maldives water villas" /><span class="tag-price">$1,999</span></div><div class="card-body"><h3>Maldives Escape</h3><p>Private villa + premium transfers.</p><div class="card-meta"><span>6 Days</span><span>4.9/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1524397057410-1e775ed476f3?q=80&w=1200&auto=format&fit=crop" alt="Europe train trip" /><span class="tag-price">$2,450</span></div><div class="card-body"><h3>Grand Europe Loop</h3><p>Paris, Rome, Vienna, and Prague.</p><div class="card-meta"><span>10 Days</span><span>4.8/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1200&auto=format&fit=crop" alt="Dubai luxury tour" /><span class="tag-price">$1,760</span></div><div class="card-body"><h3>Dubai Elite Nights</h3><p>Skylines, desert safari, marina cruises.</p><div class="card-meta"><span>5 Days</span><span>4.7/5</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <article class="luxury-banner">
+          <img class="parallax-layer" data-speed="0.24" loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1500&auto=format&fit=crop" alt="Luxury travel by mountains" />
+          <div class="luxury-content">
+            <p class="kicker" style="color:#fff">Luxury Experiences</p>
+            <h2 class="section-title">Crafted Moments Beyond Ordinary Tourism</h2>
+            <p>From private yacht evenings to helicopter city views, experience destinations through exclusive access and custom planning.</p>
+            <a class="btn btn-outline" href="contact.html">Customize Experience</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <p class="kicker">Travel Categories</p>
+        <h2 class="section-title">Find Your Perfect Trip Style</h2>
+        <div class="category-grid">
+          <article class="category-card card"><i class="fa-solid fa-person-hiking"></i><h3>Adventure</h3></article>
+          <article class="category-card card"><i class="fa-solid fa-heart"></i><h3>Honeymoon</h3></article>
+          <article class="category-card card"><i class="fa-solid fa-people-roof"></i><h3>Family</h3></article>
+          <article class="category-card card"><i class="fa-solid fa-gem"></i><h3>Luxury</h3></article>
+          <article class="category-card card"><i class="fa-solid fa-plane-departure"></i><h3>International</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <p class="kicker">Video Travel Stories</p>
+        <h2 class="section-title">Real Journeys, Real Memories</h2>
+        <div class="stories-slider">
+          <figure class="story-video"><iframe loading="lazy" src="https://www.youtube.com/embed/rvmEz9RiDZ8?si=zRa-1Lkb-npzpCqB" title="Travel story one" allowfullscreen></iframe></figure>
+          <figure class="story-video"><iframe loading="lazy" src="https://www.youtube.com/embed/Scxs7L0vhZ4?mute=1&controls=0&loop=1&playlist=Scxs7L0vhZ4" title="Travel story two" allowfullscreen></iframe></figure>
+          <figure class="story-video"><iframe loading="lazy" src="https://www.youtube.com/embed/f59dDEk57i0?mute=1&controls=0&loop=1&playlist=f59dDEk57i0" title="Travel story three" allowfullscreen></iframe></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <p class="kicker">Testimonials</p>
+        <h2 class="section-title">What Our Travelers Say</h2>
+        <div class="testimonial-stage">
+          <div class="testimonial-track">
+            <article class="testimonial-card"><p>"MTST handled everything with elegance. Our Europe honeymoon felt like a film."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Ava & Daniel</div></article>
+            <article class="testimonial-card"><p>"Perfect itinerary balance: luxury hotels, local culture, and smooth logistics."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Noah R.</div></article>
+            <article class="testimonial-card"><p>"Outstanding support and transparent communication. Highly recommended for international trips."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Priya S.</div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <p class="kicker">Travel Statistics</p>
+        <h2 class="section-title">Proven Global Expertise</h2>
+        <div class="grid stat-grid">
+          <article class="stat-card card"><h3><span data-count="68">0</span>+</h3><p>Countries Covered</p></article>
+          <article class="stat-card card"><h3><span data-count="12500">0</span>+</h3><p>Happy Travelers</p></article>
+          <article class="stat-card card"><h3><span data-count="3400">0</span>+</h3><p>Tours Completed</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <p class="kicker">Interactive Map</p>
+        <h2 class="section-title">Our Active Global Routes</h2>
+        <div class="map-wrap">
+          <img loading="lazy" src="https://dalelane.co.uk/blog/wp-content/uploads/2025/12/thumbnail-3.jpg" alt="World map background" />
+          <span class="marker" style="top:36%;left:24%" data-city="New York"></span>
+          <span class="marker" style="top:40%;left:48%" data-city="Paris"></span>
+          <span class="marker" style="top:44%;left:72%" data-city="Tokyo"></span>
+          <span class="marker" style="top:62%;left:56%" data-city="Dubai"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <p class="kicker">Blog Preview</p>
+        <h2 class="section-title">Travel Insights & Inspirations</h2>
+        <div class="blog-grid">
+          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop" alt="Beach travel blog" /></div><div class="card-body"><h3>7 Luxury Island Getaways for 2026</h3><p class="section-subtitle">Discover premium escapes with privacy and style.</p></div></article>
+          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1000&auto=format&fit=crop" alt="Mountain travel blog" /></div><div class="card-body"><h3>How to Plan a Stress-Free Europe Tour</h3><p class="section-subtitle">Simple frameworks for smooth multi-country travel.</p></div></article>
+          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1000&auto=format&fit=crop" alt="City travel blog" /></div><div class="card-body"><h3>City Breaks With Five-Star Comfort</h3><p class="section-subtitle">Where culture and comfort meet in iconic capitals.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <div class="newsletter">
+          <p class="kicker">Newsletter Subscription</p>
+          <h2 class="section-title">Get Exclusive Deals & Global Travel Updates</h2>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email" class="sr-only">Email</label>
+            <input class="field" id="newsletter-email" name="email" type="email" placeholder="Enter your email address" required />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <article class="cta-banner">
+          <div>
+            <p class="kicker">Ready For Your Next Journey?</p>
+            <h2 class="section-title" style="margin:0">Start Planning With MTST Travel Today</h2>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Book Your Consultation</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>About MTST Travel</h4>
+        <p>Premium international tours designed for modern travelers who value trust, comfort, and cinematic experiences.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="tours.html">Tours</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Tours</h4>
+        <ul><li><a href="tours.html">Luxury Europe</a></li><li><a href="tours.html">Island Escapes</a></li><li><a href="tours.html">Family Tours</a></li><li><a href="tours.html">Business Leisure</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li>+94 9005 3646</li><li>hello@mtsttravel.com</li><li>Global Assistance 24/7</li></ul>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li><li><a href="#">LinkedIn</a></li></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">(c) 2026 MTST Travel. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
