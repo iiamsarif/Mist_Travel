@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore world destinations with MTST Travel. Filter destination styles and find premium global experiences." />
+  <meta name="description" content="Explore premium India destinations with MTST Travel. Filter by beaches, cities, nature, and luxury experiences." />
   <title>Destinations | MTST Travel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +11,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="loading-screen">
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-core">
+      <h1 class="preloader-name"><span style="animation-delay:.05s">M</span><span style="animation-delay:.12s">T</span><span style="animation-delay:.19s">S</span><span style="animation-delay:.26s">T</span></h1>
+      <p class="preloader-tag">Travel</p>
+      <div class="preloader-progress-wrap"><div class="preloader-progress" id="preloaderProgress"></div></div>
+    </div>
+  </div>
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
@@ -35,13 +42,13 @@
 
   <main>
     <section class="hero" style="min-height:72vh">
-      <video class="hero-video" autoplay muted loop playsinline preload="metadata"  aria-label="International travel destinations video">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata"  aria-label="India travel destinations video">
         <source src="videos/1394254-hd_1366_720_24fps.mp4" type="video/mp4" />
 
       </video>
       <div class="hero-content">
-        <h1 class="hero-title split-words">Explore Premium Global Destinations</h1>
-        <p class="hero-subtitle">From alpine villages to tropical coastlines, discover curated locations built for memorable international travel.</p>
+        <h1 class="hero-title split-words">Explore Premium Indian Destinations</h1>
+        <p class="hero-subtitle">From Himalayan valleys to tropical coastlines, discover curated locations built for memorable India travel.</p>
       </div>
     </section>
 
@@ -57,18 +64,18 @@
           <button class="tab-btn" data-filter="luxury" type="button">Luxury</button>
         </div>
         <div class="dest-grid">
-          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?q=80&w=800&auto=format&fit=crop" alt="Bora Bora" /><div class="destination-info"><h3>Bora Bora</h3><p>French Polynesia</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop" alt="Singapore" /><div class="destination-info"><h3>Singapore</h3><p>Future city break</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=800&auto=format&fit=crop" alt="Norway fjords" /><div class="destination-info"><h3>Norway Fjords</h3><p>Nature immersion</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Monaco" /><div class="destination-info"><h3>Monaco</h3><p>Luxury coast</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=800&auto=format&fit=crop" alt="Phuket" /><div class="destination-info"><h3>Phuket</h3><p>Tropical blue bays</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop" alt="London" /><div class="destination-info"><h3>London</h3><p>Heritage and modernity</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Banff" /><div class="destination-info"><h3>Banff</h3><p>Mountain serenity</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="https://images.unsplash.com/photo-1505664063603-28e48ca204eb?q=80&w=800&auto=format&fit=crop" alt="Abu Dhabi" /><div class="destination-info"><h3>Abu Dhabi</h3><p>Refined luxury</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="https://images.unsplash.com/photo-1540206395-68808572332f?q=80&w=800&auto=format&fit=crop" alt="Seychelles" /><div class="destination-info"><h3>Seychelles</h3><p>Crystal lagoons</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?q=80&w=800&auto=format&fit=crop" alt="Seoul" /><div class="destination-info"><h3>Seoul</h3><p>Creative metropolis</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="https://images.unsplash.com/photo-1431274172761-fca41d930114?q=80&w=800&auto=format&fit=crop" alt="Iceland" /><div class="destination-info"><h3>Iceland</h3><p>Glaciers and lights</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=800&auto=format&fit=crop" alt="Maldives" /><div class="destination-info"><h3>Maldives</h3><p>Private villa paradise</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="images/andaman.webp" alt="Andaman Islands" /><div class="destination-info"><h3>Andaman</h3><p>Clear blue island escape</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="images/varanasi.webp" alt="Varanasi ghats" /><div class="destination-info"><h3>Varanasi</h3><p>Timeless riverside culture</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="images/ladakh.webp" alt="Ladakh mountains" /><div class="destination-info"><h3>Ladakh</h3><p>High-altitude nature routes</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="images/udaipur.webp" alt="Udaipur palace" /><div class="destination-info"><h3>Udaipur</h3><p>Lake palace luxury</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="images/goa.webp" alt="Goa beach" /><div class="destination-info"><h3>Goa</h3><p>Premium coastal stays</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="images/jaipur.webp" alt="Jaipur architecture" /><div class="destination-info"><h3>Jaipur</h3><p>Royal heritage city</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="images/kashmir.webp" alt="Kashmir valley" /><div class="destination-info"><h3>Kashmir</h3><p>Snow valleys and lakes</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="images/kashmir-luxury.webp" alt="Shimla luxury stays" /><div class="destination-info"><h3>Shimla</h3><p>Hill luxury retreat</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="images/kovalam.webp" alt="Kovalam beach" /><div class="destination-info"><h3>Kovalam</h3><p>Relaxed seaside charm</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="images/mumbai.webp" alt="Mumbai skyline" /><div class="destination-info"><h3>Mumbai</h3><p>Modern city pulse</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="images/kerala.webp" alt="Kerala backwaters" /><div class="destination-info"><h3>Kerala</h3><p>Backwater nature retreat</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="images/rajasthan.webp" alt="Jodhpur palace" /><div class="destination-info"><h3>Jodhpur</h3><p>Desert royal luxury</p></div></article>
         </div>
       </div>
     </section>
@@ -76,14 +83,14 @@
     <section class="section" style="background:var(--bg-soft)">
       <div class="container reveal">
         <p class="kicker">Popular Cities</p>
-        <h2 class="section-title">Most Requested Urban Highlights</h2>
+        <h2 class="section-title">Most Requested Indian Cities</h2>
         <div class="city-grid">
-          <article class="city-chip card">Paris</article>
-          <article class="city-chip card">Tokyo</article>
-          <article class="city-chip card">Dubai</article>
-          <article class="city-chip card">New York</article>
-          <article class="city-chip card">Rome</article>
-          <article class="city-chip card">Singapore</article>
+          <article class="city-chip card">Delhi</article>
+          <article class="city-chip card">Mumbai</article>
+          <article class="city-chip card">Bengaluru</article>
+          <article class="city-chip card">Jaipur</article>
+          <article class="city-chip card">Kolkata</article>
+          <article class="city-chip card">Hyderabad</article>
         </div>
       </div>
     </section>
@@ -91,11 +98,11 @@
     <section class="section">
       <div class="container reveal">
         <p class="kicker">Travel Tips</p>
-        <h2 class="section-title">Smart Planning For International Trips</h2>
+        <h2 class="section-title">Smart Planning For India Trips</h2>
         <div class="tips-grid">
-          <article class="tip-card card"><div class="card-body"><h3>Visa Timing</h3><p class="section-subtitle">Apply early and keep digital + printed copies of all travel documents.</p></div></article>
-          <article class="tip-card card"><div class="card-body"><h3>Local Currency</h3><p class="section-subtitle">Carry a balanced mix of card access and local cash for convenience.</p></div></article>
-          <article class="tip-card card"><div class="card-body"><h3>Travel Insurance</h3><p class="section-subtitle">Protect your journey with reliable global coverage before departure.</p></div></article>
+          <article class="tip-card card"><div class="card-body"><h3>Season Planning</h3><p class="section-subtitle">Match your route with best seasonal windows for hill, beach, or desert regions.</p></div></article>
+          <article class="tip-card card"><div class="card-body"><h3>Local Transport</h3><p class="section-subtitle">Reserve flights and rail early for smoother inter-city movement during peak dates.</p></div></article>
+          <article class="tip-card card"><div class="card-body"><h3>Regional Essentials</h3><p class="section-subtitle">Carry valid IDs, weather-ready clothing, and digital bookings for all stays.</p></div></article>
         </div>
       </div>
     </section>
@@ -127,10 +134,10 @@
 
   <footer class="footer">
     <div class="container footer-grid">
-      <div><h4>About MTST Travel</h4><p>Global destination experts delivering premium travel experiences with detail-first planning.</p></div>
+      <div><h4>About MTST Travel</h4><p>India destination experts delivering premium travel experiences with detail-first planning.</p></div>
       <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="tours.html">Tours</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Tours</h4><ul><li><a href="tours.html">Luxury Europe</a></li><li><a href="tours.html">Island Escapes</a></li><li><a href="tours.html">Family Tours</a></li><li><a href="tours.html">Business Leisure</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>+94 9005 3646</li><li>hello@mtsttravel.com</li><li>Global Assistance 24/7</li></ul></div>
+      <div><h4>Tours</h4><ul><li><a href="tours.html">Kashmir Signature</a></li><li><a href="tours.html">Rajasthan Royal</a></li><li><a href="tours.html">Kerala Wellness</a></li><li><a href="tours.html">North East Explorer</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>9490053646</li><li>mtstpay@gmail.com</li><li>India Assistance 24/7</li></ul></div>
       <div><h4>Social</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li><li><a href="#">LinkedIn</a></li></ul></div>
     </div>
     <div class="container footer-bottom">(c) 2026 MTST Travel. All rights reserved.</div>

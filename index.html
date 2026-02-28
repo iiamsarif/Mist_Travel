@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MTST Travel delivers ultra-premium international tours, luxury experiences, and trusted travel planning worldwide." />
+  <meta name="description" content="MTST Travel delivers ultra-premium India tour packages, cultural journeys, and trusted domestic travel planning." />
   <title>MTST Travel | Luxury International Travel Agency</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +11,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="loading-screen">
+  <div class="site-preloader" id="sitePreloader" aria-hidden="true">
+    <div class="preloader-core">
+      <h1 class="preloader-name"><span style="animation-delay:.05s">M</span><span style="animation-delay:.12s">T</span><span style="animation-delay:.19s">S</span><span style="animation-delay:.26s">T</span></h1>
+      <p class="preloader-tag">Travel</p>
+      <div class="preloader-progress-wrap"><div class="preloader-progress" id="preloaderProgress"></div></div>
+    </div>
+  </div>
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
@@ -41,12 +48,12 @@
   <main>
     <section class="hero" id="home">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata" >
-        <source src="videos/3015510-hd_1920_1080_24fps.mp4" type="video/mp4" />
+        <source src="videos/6587044-hd_1280_720_30fps.mp4" type="video/mp4" />
       
       </video>
       <div class="hero-content">
         <h1 class="hero-title split-words">Explore The World With MTST Travel</h1>
-        <p class="hero-subtitle">Curated luxury journeys across iconic cities, hidden islands, and elite destinations with seamless, trusted service from departure to return.</p>
+        <p class="hero-subtitle">Curated luxury journeys across iconic Indian cities, hill stations, beaches, and heritage routes with seamless service from start to finish.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#featured">Explore Tours</a>
           <a class="btn btn-outline" href="contact.html">Contact Us</a>
@@ -57,29 +64,40 @@
     <section class="section" id="featured">
       <div class="container reveal">
         <p class="kicker">Featured Destinations</p>
-        <h2 class="section-title">Signature Places Across Continents</h2>
-        <p class="section-subtitle">Handpicked international escapes crafted for comfort, elegance, and unforgettable cultural immersion.</p>
-        <div class="destination-grid">
-          <article class="destination-card card tilt-card"><img loading="lazy" src="http://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?_gl=1*1jw1oan*_ga*NDc1NDU4MTU5LjE3NzE4MTkxMTQ.*_ga_8JE65Q40S6*czE3NzIyNjQxMTEkbzEzJGcxJHQxNzcyMjY2MDQ2JGo0NSRsMCRoMA.." alt="Swiss Alps" /><div class="destination-info"><h3>Swiss Alps</h3><p>Snow luxury retreats</p></div></article>
-          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=900&auto=format&fit=crop" alt="Tokyo city lights" /><div class="destination-info"><h3>Tokyo</h3><p>Neon + tradition</p></div></article>
-          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=900&auto=format&fit=crop" alt="Paris Eiffel Tower" /><div class="destination-info"><h3>Paris</h3><p>Iconic romance</p></div></article>
-          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.pexels.com/photos/1172105/pexels-photo-1172105.jpeg?_gl=1*vpxc5l*_ga*NDc1NDU4MTU5LjE3NzE4MTkxMTQ.*_ga_8JE65Q40S6*czE3NzIyNjQxMTEkbzEzJGcxJHQxNzcyMjY2MDQ2JGo0NSRsMCRoMA.." alt="Santorini white village" /><div class="destination-info"><h3>Santorini</h3><p>Aegean sunsets</p></div></article>
-          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=900&auto=format&fit=crop" alt="Dubai skyline" /><div class="destination-info"><h3>Dubai</h3><p>Urban grandeur</p></div></article>
-          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=900&auto=format&fit=crop" alt="Bali beach and resort" /><div class="destination-info"><h3>Bali</h3><p>Tropical wellness</p></div></article>
-          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=900&auto=format&fit=crop" alt="New York skyline" /><div class="destination-info"><h3>New York</h3><p>City prestige</p></div></article>
-          <article class="destination-card card tilt-card"><img loading="lazy" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=900&auto=format&fit=crop" alt="Venice canals" /><div class="destination-info"><h3>Venice</h3><p>Classic waterways</p></div></article>
+        <h2 class="section-title">Signature Indian Destinations</h2>
+        <p class="section-subtitle">Premium Indian escapes from mountains to coastlines, curated with elegant stays and cultural depth.</p>
+        <div class="featured-destination-grid">
+          <article class="featured-tile" tabindex="0" data-title="Kashmir" data-desc="Houseboats, alpine valleys, and premium mountain stays." data-image="images/kashmir.webp"><img loading="lazy" decoding="async" src="images/kashmir.webp" alt="Kashmir landscape" /><div class="featured-tile-overlay"><h3>Kashmir</h3><p>Snow valleys and lakeside elegance</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Jaipur" data-desc="Royal palaces, heritage suites, and curated cultural evenings." data-image="images/jaipur.webp"><img loading="lazy" decoding="async" src="images/jaipur.webp" alt="Jaipur city palaces" /><div class="featured-tile-overlay"><h3>Jaipur</h3><p>Royal heritage experiences</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Goa" data-desc="Luxury beach resorts, sunset cruises, and coastal lifestyle." data-image="images/goa.webp"><img loading="lazy" decoding="async" src="images/goa.webp" alt="Goa beach destination" /><div class="featured-tile-overlay"><h3>Goa</h3><p>Premium coastal retreat</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Kerala" data-desc="Backwater houseboats, wellness retreats, and green serenity." data-image="images/kerala.webp"><img loading="lazy" decoding="async" src="images/kerala.webp" alt="Kerala backwaters" /><div class="featured-tile-overlay"><h3>Kerala</h3><p>Backwater wellness escape</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Ladakh" data-desc="High-altitude routes, dramatic views, and adventure luxury." data-image="images/ladakh.webp"><img loading="lazy" decoding="async" src="images/ladakh.webp" alt="Ladakh mountains" /><div class="featured-tile-overlay"><h3>Ladakh</h3><p>High-altitude grandeur</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Varanasi" data-desc="Sacred ghats, river ceremonies, and timeless culture." data-image="images/varanasi.webp"><img loading="lazy" decoding="async" src="images/varanasi.webp" alt="Varanasi ghats" /><div class="featured-tile-overlay"><h3>Varanasi</h3><p>Sacred riverfront heritage</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Udaipur" data-desc="Lake palaces, regal dining, and romantic old-city charm." data-image="images/udaipur.webp"><img loading="lazy" decoding="async" src="images/udaipur.webp" alt="Udaipur lake city" /><div class="featured-tile-overlay"><h3>Udaipur</h3><p>Lake palace romance</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Andaman" data-desc="Clear waters, private islands, and refined beach luxury." data-image="images/andaman.webp"><img loading="lazy" decoding="async" src="images/andaman.webp" alt="Andaman islands" /><div class="featured-tile-overlay"><h3>Andaman</h3><p>Island luxury escape</p></div></article>
         </div>
       </div>
     </section>
 
+    <aside class="featured-preview" id="featuredPreview" aria-hidden="true">
+      <div class="featured-preview-card" role="dialog" aria-modal="false" aria-label="Destination preview">
+        <button class="featured-preview-close" type="button" aria-label="Close preview">x</button>
+        <img class="featured-preview-image" src="" alt="" />
+        <div class="featured-preview-body">
+          <h3 class="featured-preview-title"></h3>
+          <p class="featured-preview-desc"></p>
+        </div>
+      </div>
+    </aside>
+
     <section class="section">
       <div class="container about-wrap">
-        <figure class="about-media reveal parallax-layer" data-speed="0.18"><img loading="lazy" src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?q=80&w=1200&auto=format&fit=crop" alt="Luxury couple traveling" /></figure>
+        <figure class="about-media reveal parallax-layer" data-speed="0.18"><img loading="lazy" src="images/kashmir-luxury.webp" alt="Luxury India travel planning" /></figure>
         <div class="about-content reveal">
           <p class="kicker">About MTST Travel</p>
-          <h2 class="section-title">International Travel, Elevated</h2>
-          <p>MTST Travel is a premium travel house focused on world-class planning, transparent service, and curated luxury itineraries. From private airport pickups to five-star stays and guided local experiences, every trip is designed to feel effortless and refined.</p>
-          <p>Our team combines destination expertise and global network partners to create journeys with confidence, comfort, and style.</p>
+          <h2 class="section-title">Indian Travel, Elevated</h2>
+          <p>MTST Travel is a premium travel house focused on seamless planning, transparent service, and curated India itineraries. From airport pickups to luxury stays and guided local experiences, every trip is crafted to feel effortless and refined.</p>
+          <p>Our team combines deep India destination expertise and trusted local partners to create journeys with confidence, comfort, and style.</p>
           <a class="btn btn-primary" href="tours.html">View Packages</a>
         </div>
       </div>
@@ -88,9 +106,9 @@
     <section class="section" style="background:var(--bg-soft)">
       <div class="container reveal">
         <p class="kicker">Why Choose Us</p>
-        <h2 class="section-title">Trusted by Global Travelers</h2>
+        <h2 class="section-title">Trusted by India Travelers</h2>
         <div class="icon-grid">
-          <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-earth-americas"></i></div><h3>Worldwide Coverage</h3><p>Destinations across Europe, Asia, Americas, and beyond.</p></article>
+          <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-earth-americas"></i></div><h3>Pan-India Coverage</h3><p>Curated routes across North, South, East, and West India.</p></article>
           <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-shield-heart"></i></div><h3>Secure Booking</h3><p>Transparent pricing and safe payment processing.</p></article>
           <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-crown"></i></div><h3>Luxury Curation</h3><p>Hand-selected stays, transfers, and experiences.</p></article>
           <article class="icon-card card tilt-card"><div class="icon-badge"><i class="fa-solid fa-headset"></i></div><h3>24/7 Support</h3><p>Dedicated travel assistance whenever you need us.</p></article>
@@ -103,9 +121,9 @@
         <p class="kicker">Popular Tour Packages</p>
         <h2 class="section-title">Top Selling Luxury Routes</h2>
         <div class="package-grid">
-          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop" alt="Maldives water villas" /><span class="tag-price">$1,999</span></div><div class="card-body"><h3>Maldives Escape</h3><p>Private villa + premium transfers.</p><div class="card-meta"><span>6 Days</span><span>4.9/5</span></div></div></article>
-          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1524397057410-1e775ed476f3?q=80&w=1200&auto=format&fit=crop" alt="Europe train trip" /><span class="tag-price">$2,450</span></div><div class="card-body"><h3>Grand Europe Loop</h3><p>Paris, Rome, Vienna, and Prague.</p><div class="card-meta"><span>10 Days</span><span>4.8/5</span></div></div></article>
-          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1200&auto=format&fit=crop" alt="Dubai luxury tour" /><span class="tag-price">$1,760</span></div><div class="card-body"><h3>Dubai Elite Nights</h3><p>Skylines, desert safari, marina cruises.</p><div class="card-meta"><span>5 Days</span><span>4.7/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/kashmir-luxury.webp" alt="Kashmir luxury tour" /><span class="tag-price">$899</span></div><div class="card-body"><h3>Kashmir Signature Escape</h3><p>Luxury stays, valley views, and shikara rides.</p><div class="card-meta"><span>6 Days</span><span>4.9/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/rajasthan.webp" alt="Rajasthan heritage route" /><span class="tag-price">$1,050</span></div><div class="card-body"><h3>Royal Rajasthan Route</h3><p>Jaipur, Udaipur, and Jodhpur heritage stays.</p><div class="card-meta"><span>8 Days</span><span>4.8/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/kerala.webp" alt="Kerala backwater tour" /><span class="tag-price">$820</span></div><div class="card-body"><h3>Kerala Backwater Retreat</h3><p>Houseboats, Ayurveda, and coastal serenity.</p><div class="card-meta"><span>5 Days</span><span>4.7/5</span></div></div></article>
         </div>
       </div>
     </section>
@@ -113,7 +131,7 @@
     <section class="section">
       <div class="container reveal">
         <article class="luxury-banner">
-          <img class="parallax-layer" data-speed="0.24" loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1500&auto=format&fit=crop" alt="Luxury travel by mountains" />
+          <img class="parallax-layer" data-speed="0.24" loading="lazy" src="images/himalaya.webp" alt="Luxury travel in Indian mountains" />
           <div class="luxury-content">
             <p class="kicker" style="color:#fff">Luxury Experiences</p>
             <h2 class="section-title">Crafted Moments Beyond Ordinary Tourism</h2>
@@ -156,9 +174,9 @@
         <h2 class="section-title">What Our Travelers Say</h2>
         <div class="testimonial-stage">
           <div class="testimonial-track">
-            <article class="testimonial-card"><p>"MTST handled everything with elegance. Our Europe honeymoon felt like a film."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Ava & Daniel</div></article>
+            <article class="testimonial-card"><p>"MTST handled everything with elegance. Our Kashmir honeymoon felt cinematic and seamless."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Aanya & Rohan</div></article>
             <article class="testimonial-card"><p>"Perfect itinerary balance: luxury hotels, local culture, and smooth logistics."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Noah R.</div></article>
-            <article class="testimonial-card"><p>"Outstanding support and transparent communication. Highly recommended for international trips."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Priya S.</div></article>
+            <article class="testimonial-card"><p>"Outstanding support and transparent communication. Highly recommended for India family holidays."</p><div class="testimonial-author"><i class="fa-solid fa-user"></i> Priya S.</div></article>
           </div>
         </div>
       </div>
@@ -167,9 +185,9 @@
     <section class="section">
       <div class="container reveal">
         <p class="kicker">Travel Statistics</p>
-        <h2 class="section-title">Proven Global Expertise</h2>
+        <h2 class="section-title">Proven India Expertise</h2>
         <div class="grid stat-grid">
-          <article class="stat-card card"><h3><span data-count="68">0</span>+</h3><p>Countries Covered</p></article>
+          <article class="stat-card card"><h3><span data-count="28">0</span>+</h3><p>States & UT Covered</p></article>
           <article class="stat-card card"><h3><span data-count="12500">0</span>+</h3><p>Happy Travelers</p></article>
           <article class="stat-card card"><h3><span data-count="3400">0</span>+</h3><p>Tours Completed</p></article>
         </div>
@@ -179,13 +197,13 @@
     <section class="section" style="background:var(--bg-soft)">
       <div class="container reveal">
         <p class="kicker">Interactive Map</p>
-        <h2 class="section-title">Our Active Global Routes</h2>
+        <h2 class="section-title">Our Active India Routes</h2>
         <div class="map-wrap">
-          <img loading="lazy" src="https://dalelane.co.uk/blog/wp-content/uploads/2025/12/thumbnail-3.jpg" alt="World map background" />
-          <span class="marker" style="top:36%;left:24%" data-city="New York"></span>
-          <span class="marker" style="top:40%;left:48%" data-city="Paris"></span>
-          <span class="marker" style="top:44%;left:72%" data-city="Tokyo"></span>
-          <span class="marker" style="top:62%;left:56%" data-city="Dubai"></span>
+          <img loading="lazy" src="https://barlamantoday.com/wp-content/uploads/2025/11/Google-Updates-Maps-to-Show-Unified-Morocco-After-UN-Sahara-Resolution.png" alt="World map background" />
+          <span class="marker" style="top:36%;left:24%" data-city="Delhi"></span>
+          <span class="marker" style="top:40%;left:48%" data-city="Jaipur"></span>
+          <span class="marker" style="top:44%;left:72%" data-city="Kochi"></span>
+          <span class="marker" style="top:62%;left:56%" data-city="Goa"></span>
         </div>
       </div>
     </section>
@@ -195,9 +213,9 @@
         <p class="kicker">Blog Preview</p>
         <h2 class="section-title">Travel Insights & Inspirations</h2>
         <div class="blog-grid">
-          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop" alt="Beach travel blog" /></div><div class="card-body"><h3>7 Luxury Island Getaways for 2026</h3><p class="section-subtitle">Discover premium escapes with privacy and style.</p></div></article>
-          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1000&auto=format&fit=crop" alt="Mountain travel blog" /></div><div class="card-body"><h3>How to Plan a Stress-Free Europe Tour</h3><p class="section-subtitle">Simple frameworks for smooth multi-country travel.</p></div></article>
-          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1000&auto=format&fit=crop" alt="City travel blog" /></div><div class="card-body"><h3>City Breaks With Five-Star Comfort</h3><p class="section-subtitle">Where culture and comfort meet in iconic capitals.</p></div></article>
+          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/andaman.webp" alt="Andaman travel blog" /></div><div class="card-body"><h3>7 Luxury Indian Island Getaways for 2026</h3><p class="section-subtitle">Discover premium coastal escapes with privacy and style.</p></div></article>
+          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/himalaya.webp" alt="Himalayan travel blog" /></div><div class="card-body"><h3>How to Plan a Stress-Free North India Tour</h3><p class="section-subtitle">Simple frameworks for smooth multi-city journeys.</p></div></article>
+          <article class="blog-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/varanasi.webp" alt="City travel blog in India" /></div><div class="card-body"><h3>City Breaks With Five-Star Comfort in India</h3><p class="section-subtitle">Where culture and comfort meet in iconic Indian cities.</p></div></article>
         </div>
       </div>
     </section>
@@ -206,7 +224,7 @@
       <div class="container reveal">
         <div class="newsletter">
           <p class="kicker">Newsletter Subscription</p>
-          <h2 class="section-title">Get Exclusive Deals & Global Travel Updates</h2>
+          <h2 class="section-title">Get Exclusive Deals & India Travel Updates</h2>
           <form class="newsletter-form" action="#" method="post">
             <label for="newsletter-email" class="sr-only">Email</label>
             <input class="field" id="newsletter-email" name="email" type="email" placeholder="Enter your email address" required />
@@ -233,7 +251,7 @@
     <div class="container footer-grid">
       <div>
         <h4>About MTST Travel</h4>
-        <p>Premium international tours designed for modern travelers who value trust, comfort, and cinematic experiences.</p>
+        <p>Premium India tours designed for modern travelers who value trust, comfort, and cinematic experiences.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -241,11 +259,11 @@
       </div>
       <div>
         <h4>Tours</h4>
-        <ul><li><a href="tours.html">Luxury Europe</a></li><li><a href="tours.html">Island Escapes</a></li><li><a href="tours.html">Family Tours</a></li><li><a href="tours.html">Business Leisure</a></li></ul>
+        <ul><li><a href="tours.html">Kashmir Signature</a></li><li><a href="tours.html">Rajasthan Royal</a></li><li><a href="tours.html">Kerala Wellness</a></li><li><a href="tours.html">North East Explorer</a></li></ul>
       </div>
       <div>
         <h4>Contact</h4>
-        <ul><li>+94 9005 3646</li><li>hello@mtsttravel.com</li><li>Global Assistance 24/7</li></ul>
+        <ul><li>9490053646</li><li>mtstpay@gmail.com</li><li>India Assistance 24/7</li></ul>
       </div>
       <div>
         <h4>Social</h4>
@@ -263,4 +281,5 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
