@@ -8,9 +8,46 @@
   const backTop = doc.querySelector('.back-top');
   const cursorDot = doc.querySelector('.cursor-dot');
   const cursorGlow = doc.querySelector('.cursor-glow');
+  const sitePreloader = doc.querySelector('#sitePreloader');
+  const preloaderProgress = doc.querySelector('#preloaderProgress');
 
   const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+  if (sitePreloader) {
+    const minDuration = 2000;
+    const startTime = performance.now();
+    let pageLoaded = false;
+    let minDone = false;
+
+    function hidePreloader() {
+      sitePreloader.classList.add('hide');
+      body.classList.remove('loading-screen');
+      setTimeout(() => sitePreloader.remove(), 760);
+    }
+
+    function resolvePreloader() {
+      if (pageLoaded && minDone) hidePreloader();
+    }
+
+    function animateProgress(now) {
+      const elapsed = now - startTime;
+      const pct = Math.min(100, (elapsed / minDuration) * 100);
+      if (preloaderProgress) preloaderProgress.style.width = `${pct}%`;
+      if (elapsed < minDuration) {
+        requestAnimationFrame(animateProgress);
+      } else {
+        minDone = true;
+        resolvePreloader();
+      }
+    }
+
+    requestAnimationFrame(animateProgress);
+    window.addEventListener('load', () => {
+      pageLoaded = true;
+      resolvePreloader();
+    });
+  }
 
   doc.querySelectorAll('.split-words').forEach((el) => {
     const text = el.textContent.trim();
@@ -106,14 +143,67 @@
 
   doc.querySelectorAll('.tilt-card').forEach((card) => {
     if (isMobile) return;
+    let frame = null;
+    let nextX = 0;
+    let nextY = 0;
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
-      const y = ((e.clientY - rect.top) / rect.height - 0.5) * -14;
-      card.style.transform = `perspective(1200px) rotateX(${y}deg) rotateY(${x}deg) translateY(-6px)`;
+      nextX = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+      nextY = ((e.clientY - rect.top) / rect.height - 0.5) * -10;
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        card.style.transform = `perspective(1200px) rotateX(${nextY}deg) rotateY(${nextX}deg) translateY(-4px)`;
+        frame = null;
+      });
     });
-    card.addEventListener('mouseleave', () => card.style.transform = '');
+    card.addEventListener('mouseleave', () => {
+      if (frame) cancelAnimationFrame(frame);
+      frame = null;
+      card.style.transform = '';
+    });
   });
+
+  const featuredPreview = doc.querySelector('#featuredPreview');
+  if (featuredPreview) {
+    const previewImage = featuredPreview.querySelector('.featured-preview-image');
+    const previewTitle = featuredPreview.querySelector('.featured-preview-title');
+    const previewDesc = featuredPreview.querySelector('.featured-preview-desc');
+    const previewClose = featuredPreview.querySelector('.featured-preview-close');
+    const featuredTiles = doc.querySelectorAll('.featured-tile');
+
+    function openFeaturedPreview(tile) {
+      if (!tile || !previewImage || !previewTitle || !previewDesc) return;
+      previewImage.src = tile.dataset.image || tile.querySelector('img')?.src || '';
+      previewImage.alt = tile.querySelector('img')?.alt || tile.dataset.title || 'Destination preview';
+      previewTitle.textContent = tile.dataset.title || tile.querySelector('h3')?.textContent || '';
+      previewDesc.textContent = tile.dataset.desc || tile.querySelector('p')?.textContent || '';
+      featuredPreview.classList.add('show');
+      featuredPreview.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeFeaturedPreview() {
+      featuredPreview.classList.remove('show');
+      featuredPreview.setAttribute('aria-hidden', 'true');
+    }
+
+    featuredTiles.forEach((tile) => {
+      tile.addEventListener('click', () => openFeaturedPreview(tile));
+      tile.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openFeaturedPreview(tile);
+        }
+      });
+    });
+
+    if (previewClose) previewClose.addEventListener('click', closeFeaturedPreview);
+    featuredPreview.addEventListener('click', (e) => {
+      if (e.target === featuredPreview) closeFeaturedPreview();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && featuredPreview.classList.contains('show')) closeFeaturedPreview();
+    });
+  }
 
   doc.querySelectorAll('[data-filter]').forEach((btn) => {
     btn.addEventListener('click', () => {
