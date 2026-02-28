@@ -8,46 +8,9 @@
   const backTop = doc.querySelector('.back-top');
   const cursorDot = doc.querySelector('.cursor-dot');
   const cursorGlow = doc.querySelector('.cursor-glow');
-  const sitePreloader = doc.querySelector('#sitePreloader');
-  const preloaderProgress = doc.querySelector('#preloaderProgress');
 
   const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-  if (sitePreloader) {
-    const minDuration = 2000;
-    const startTime = performance.now();
-    let pageLoaded = false;
-    let minDone = false;
-
-    function hidePreloader() {
-      sitePreloader.classList.add('hide');
-      body.classList.remove('loading-screen');
-      setTimeout(() => sitePreloader.remove(), 760);
-    }
-
-    function resolvePreloader() {
-      if (pageLoaded && minDone) hidePreloader();
-    }
-
-    function animateProgress(now) {
-      const elapsed = now - startTime;
-      const pct = Math.min(100, (elapsed / minDuration) * 100);
-      if (preloaderProgress) preloaderProgress.style.width = `${pct}%`;
-      if (elapsed < minDuration) {
-        requestAnimationFrame(animateProgress);
-      } else {
-        minDone = true;
-        resolvePreloader();
-      }
-    }
-
-    requestAnimationFrame(animateProgress);
-    window.addEventListener('load', () => {
-      pageLoaded = true;
-      resolvePreloader();
-    });
-  }
 
   doc.querySelectorAll('.split-words').forEach((el) => {
     const text = el.textContent.trim();
@@ -268,20 +231,18 @@
       const intensity = isMobile ? 40 : 70;
       gsap.fromTo(
         el,
-        { opacity: 0, y: intensity, scale: 0.96, filter: 'blur(8px)' },
+        { opacity: 0, y: intensity, scale: 0.96 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          filter: 'blur(0px)',
           duration: isMobile ? 0.7 : 1,
           ease: 'back.out(1.25)',
           scrollTrigger: {
             trigger: el,
             start: 'top 88%',
             end: 'bottom 12%',
-            onLeave: () => gsap.to(el, { y: -24, opacity: 0.7, scale: 0.98, duration: 0.35 }),
-            onEnterBack: () => gsap.to(el, { y: 0, opacity: 1, scale: 1, duration: 0.4 }),
+            once: true,
           },
         }
       );
@@ -328,8 +289,9 @@
   }
 
   const ambient = doc.querySelector('.ambient-bg');
+  const ambientHidden = !ambient || window.getComputedStyle(ambient).display === 'none';
   const canvas = doc.querySelector('.particle-canvas');
-  if (ambient) {
+  if (!ambientHidden && ambient) {
     ambient.addEventListener('pointermove', (e) => {
       if (isReduced || isMobile) return;
       const ripple = doc.createElement('span');
@@ -341,7 +303,7 @@
     });
   }
 
-  if (canvas) {
+  if (!ambientHidden && canvas) {
     const ctx = canvas.getContext('2d');
     let particles = [];
     const density = isMobile ? 28 : 52;
