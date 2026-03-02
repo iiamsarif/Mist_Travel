@@ -47,24 +47,10 @@
   }
 
   async function renderFromCache(url, push) {
-    try {
-      const target = new URL(url, window.location.href);
-      if (push && target.href === window.location.href) return;
-      let html = pageCache.get(target.href);
-      if (!html) {
-        const res = await fetch(target.href, { credentials: 'same-origin' });
-        if (!res.ok) throw new Error('fetch failed');
-        html = await res.text();
-        pageCache.set(target.href, html);
-      }
-      if (push) sessionStorage.setItem('mtst_force_top', '1');
-      if (push) history.pushState({ soft: true, href: target.href }, '', target.href);
-      doc.open();
-      doc.write(html);
-      doc.close();
-    } catch {
-      window.location.href = url;
-    }
+    const target = new URL(url, window.location.href);
+    if (target.href === window.location.href) return;
+    if (push) sessionStorage.setItem('mtst_force_top', '1');
+    window.location.href = target.href;
   }
 
   doc.querySelectorAll('a[href]').forEach((a) => {
@@ -89,10 +75,7 @@
     renderFromCache(a.href, true);
   });
 
-  window.addEventListener('popstate', () => {
-    renderFromCache(window.location.href, false);
-  });
-
+  
   doc.querySelectorAll('.split-words').forEach((el) => {
     const text = el.textContent.trim();
     el.innerHTML = text
@@ -425,9 +408,19 @@
   body.addEventListener('click', (e) => {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
-    const target = doc.querySelector(anchor.getAttribute('href'));
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') return;
+    let target;
+    try {
+      target = doc.querySelector(href);
+    } catch {
+      return;
+    }
     if (!target) return;
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();
+
+
+
