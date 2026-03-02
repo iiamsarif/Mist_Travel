@@ -11,6 +11,87 @@
 
   const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const pageCache = new Map();
+
+  if (sessionStorage.getItem('mtst_force_top') === '1') {
+    sessionStorage.removeItem('mtst_force_top');
+    window.scrollTo(0, 0);
+    doc.documentElement.scrollTop = 0;
+    body.scrollTop = 0;
+  }
+
+  function isLocalHtmlLink(anchor) {
+    if (!anchor) return false;
+    const rawHref = anchor.getAttribute('href') || '';
+    if (!rawHref || rawHref.startsWith('#')) return false;
+    if (anchor.target && anchor.target !== '_self') return false;
+    if (anchor.hasAttribute('download')) return false;
+    let url;
+    try {
+      url = new URL(anchor.href, window.location.href);
+    } catch {
+      return false;
+    }
+    return url.origin === window.location.origin && url.pathname.endsWith('.html');
+  }
+
+  async function warmPageCache(url) {
+    if (!url || pageCache.has(url)) return;
+    try {
+      const res = await fetch(url, { credentials: 'same-origin' });
+      if (!res.ok) return;
+      pageCache.set(url, await res.text());
+    } catch {
+      // ignore
+    }
+  }
+
+  async function renderFromCache(url, push) {
+    try {
+      const target = new URL(url, window.location.href);
+      if (push && target.href === window.location.href) return;
+      let html = pageCache.get(target.href);
+      if (!html) {
+        const res = await fetch(target.href, { credentials: 'same-origin' });
+        if (!res.ok) throw new Error('fetch failed');
+        html = await res.text();
+        pageCache.set(target.href, html);
+      }
+      if (push) sessionStorage.setItem('mtst_force_top', '1');
+      if (push) history.pushState({ soft: true, href: target.href }, '', target.href);
+      doc.open();
+      doc.write(html);
+      doc.close();
+    } catch {
+      window.location.href = url;
+    }
+  }
+
+  doc.querySelectorAll('a[href]').forEach((a) => {
+    if (!isLocalHtmlLink(a)) return;
+    const href = new URL(a.href, window.location.href).href;
+    a.addEventListener('mouseenter', () => warmPageCache(href), { passive: true });
+    a.addEventListener('touchstart', () => warmPageCache(href), { passive: true });
+  });
+
+  setTimeout(() => {
+    doc.querySelectorAll('.nav-links a[href], .nav-cta[href]').forEach((a) => {
+      if (!isLocalHtmlLink(a)) return;
+      warmPageCache(new URL(a.href, window.location.href).href);
+    });
+  }, 500);
+
+  doc.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href]');
+    if (!a || !isLocalHtmlLink(a)) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    renderFromCache(a.href, true);
+  });
+
+  window.addEventListener('popstate', () => {
+    renderFromCache(window.location.href, false);
+  });
 
   doc.querySelectorAll('.split-words').forEach((el) => {
     const text = el.textContent.trim();
@@ -200,7 +281,7 @@
   }
 
   const stories = doc.querySelector('.stories-slider');
-  if (stories && window.gsap && !isReduced) {
+  if (stories && window.gsap && !isReduced && !isMobile) {
     gsap.to(stories, {
       x: -16,
       repeat: -1,
