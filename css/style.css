@@ -281,6 +281,11 @@ main,
   gap: 14px;
 }
 
+.hero-actions .btn {
+  opacity: 1;
+  visibility: visible;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
@@ -1510,10 +1515,36 @@ select:focus {
     display: none;
   }
 
+  .hero {
+    min-height: 100svh;
+    align-items: flex-start;
+    padding-top: 112px;
+    padding-bottom: 34px;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
   .hero-title {
-    font-size: clamp(2.5rem, 9vw, 3.45rem);
+    font-size: clamp(2.2rem, 8vw, 3rem);
     line-height: 1.08;
     text-transform: uppercase;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    max-width: 92%;
+  }
+
+  .hero-actions {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 11px 22px;
   }
 
   .luxury-banner {
@@ -1596,6 +1627,10 @@ select:focus {
     padding: 24px;
   }
 }
+
+
+
+
 
 
 
