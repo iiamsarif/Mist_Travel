@@ -153,11 +153,11 @@ main,
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: #03afff;
 }
 
 .brand span {
-  color: var(--highlight);
+  color: #d62828;
 }
 
 .nav-links {
@@ -169,7 +169,7 @@ main,
 .nav-links a {
   position: relative;
   font-size: 0.95rem;
-  color: #0082a7;
+  color: #ffffff;
   padding-bottom: 5px;
 }
 
@@ -182,6 +182,13 @@ main,
   height: 2px;
   background: linear-gradient(90deg, var(--accent), var(--highlight));
   transition: var(--transition);
+}
+
+.site-header.scrolled .brand { color: #0d3b66; }
+.site-header.scrolled .brand span { color: #d62828; }
+
+.site-header.scrolled .nav-links a {
+  color: #165a99;
 }
 
 .nav-links a:hover::after,
@@ -1437,6 +1444,14 @@ select:focus {
     z-index: 1201;
   }
 
+  .nav-links a {
+    color: #165a99;
+  }
+
+  .site-header:not(.scrolled) .nav-links.open a {
+    color: #165a99;
+  }
+
   .nav-links.open {
     transform: translateY(0);
     opacity: 1;
@@ -1530,3 +1545,4 @@ select:focus {
     padding: 24px;
   }
 }
+
