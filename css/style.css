@@ -168,7 +168,10 @@ main,
 
 .nav-links a {
   position: relative;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: #ffffff;
   padding-bottom: 5px;
 }
@@ -1156,6 +1159,7 @@ select:focus {
 }
 
 .whatsapp-float,
+.book-now-float,
 .back-top {
   position: fixed;
   right: 20px;
@@ -1181,9 +1185,28 @@ select:focus {
 .whatsapp-float:hover {
   transform: scale(1.12);
 }
+.book-now-float {
+  bottom: 94px;
+  animation: bouncePulse 2.6s infinite;
+  width: auto;
+  height: 48px;
+  min-width: 122px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #0d3b66, #165a99);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 10px 22px rgba(13, 59, 102, 0.32);
+}
+
+.book-now-float:hover {
+  transform: translateY(-2px) scale(1.04);
+}
 
 .back-top {
-  bottom: 94px;
+  bottom: 164px;
   color: #fff;
   background: var(--accent);
   opacity: 0;
@@ -1446,6 +1469,10 @@ select:focus {
 
   .nav-links a {
     color: #165a99;
+    font-size: 1.02rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   .site-header:not(.scrolled) .nav-links.open a {
@@ -1475,7 +1502,9 @@ select:focus {
   }
 
   .hero-title {
-    text-transform: none;
+    font-size: clamp(2.5rem, 9vw, 3.45rem);
+    line-height: 1.08;
+    text-transform: uppercase;
   }
 
   .luxury-banner {
@@ -1483,14 +1512,27 @@ select:focus {
   }
 
   .whatsapp-float,
+  .book-now-float,
   .back-top {
-    width: 52px;
-    height: 52px;
     right: 14px;
   }
 
+  .whatsapp-float,
   .back-top {
+    width: 52px;
+    height: 52px;
+  }
+
+  .book-now-float {
     bottom: 82px;
+    min-width: 112px;
+    height: 46px;
+    padding: 0 16px;
+    font-size: 0.82rem;
+  }
+
+  .back-top {
+    bottom: 146px;
   }
 
   .whatsapp-float {
@@ -1545,4 +1587,9 @@ select:focus {
     padding: 24px;
   }
 }
+
+
+
+
+
 
