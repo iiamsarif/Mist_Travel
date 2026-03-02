@@ -326,7 +326,7 @@
       });
     });
 
-    const heroParts = gsap.utils.toArray('.hero-title .word, .hero-subtitle, .hero-actions .btn');
+    const heroParts = gsap.utils.toArray('.hero-title .word, .hero-subtitle');
     if (heroParts.length && !isReduced) {
       gsap.from(heroParts, {
         y: 70,
@@ -421,6 +421,7 @@
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();
+
 
 
 
