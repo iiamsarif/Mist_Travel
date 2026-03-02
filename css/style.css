@@ -567,7 +567,9 @@ main,
 }
 
 .about-media img {
-  min-height: 420px;
+  min-height: 320px;
+  max-height: 420px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -1446,6 +1448,13 @@ select:focus {
     padding: 72px 0;
   }
 
+  .about-media img {
+    min-height: 260px;
+    max-height: 320px;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .mobile-toggle {
     display: inline-grid;
     place-items: center;
@@ -1587,6 +1596,8 @@ select:focus {
     padding: 24px;
   }
 }
+
+
 
 
 
