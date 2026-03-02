@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -35,6 +36,7 @@
     <section class="hero" style="min-height:100vh" id="tours">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata"  aria-label="Luxury India travel tours video" poster="images/hero_place3.jpeg">
         <source src="videos/6836795-hd_1280_720_24fps.mp4" type="video/mp4" />
+        <track kind="captions" srclang="en" src="videos/captions.vtt" label="English captions" />
        
       </video>
       <div class="hero-content">
@@ -48,9 +50,9 @@
         <p class="kicker">Tour Packages</p>
         <h2 class="section-title">Most Booked Itineraries</h2>
         <div class="tour-grid">
-          <article class="tour-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/kashmir.webp" alt="Kashmir valley tour" /></div><div class="card-body"><h3>Kashmir Valley Route</h3><p>Srinagar, Gulmarg, and Pahalgam with private transfers.</p><div class="card-meta"><span>7 Days</span><span>Rs 77,000</span></div></div></article>
-          <article class="tour-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/rajasthan.webp" alt="Rajasthan classics tour" /></div><div class="card-body"><h3>Rajasthan Classics</h3><p>Jaipur, Udaipur, and Jodhpur heritage highlights.</p><div class="card-meta"><span>8 Days</span><span>Rs 98,000</span></div></div></article>
-          <article class="tour-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/kerala.webp" alt="Kerala wellness tour" /></div><div class="card-body"><h3>Kerala Wellness Tour</h3><p>Backwaters, resorts, and cultural evenings.</p><div class="card-meta"><span>6 Days</span><span>Rs 71,500</span></div></div></article>
+          <article class="tour-card tilt-card"><div class="media-wrap"><img width="1200" height="800" loading="lazy" src="images/kashmir.webp" alt="Kashmir valley tour" /></div><div class="card-body"><h3>Kashmir Valley Route</h3><p>Srinagar, Gulmarg, and Pahalgam with private transfers.</p><div class="card-meta"><span>7 Days</span><span>Rs 77,000</span></div></div></article>
+          <article class="tour-card tilt-card"><div class="media-wrap"><img width="1200" height="800" loading="lazy" src="images/rajasthan.webp" alt="Rajasthan classics tour" /></div><div class="card-body"><h3>Rajasthan Classics</h3><p>Jaipur, Udaipur, and Jodhpur heritage highlights.</p><div class="card-meta"><span>8 Days</span><span>Rs 98,000</span></div></div></article>
+          <article class="tour-card tilt-card"><div class="media-wrap"><img width="1200" height="800" loading="lazy" src="images/kerala.webp" alt="Kerala wellness tour" /></div><div class="card-body"><h3>Kerala Wellness Tour</h3><p>Backwaters, resorts, and cultural evenings.</p><div class="card-meta"><span>6 Days</span><span>Rs 71,500</span></div></div></article>
         </div>
       </div>
     </section>
@@ -130,6 +132,7 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+    <a class="book-now-float" href="contact.html#contact" aria-label="Book now">Book Now</a>
   <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -137,6 +140,11 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
 

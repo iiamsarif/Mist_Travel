@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -37,6 +38,7 @@
     <section class="hero" style="min-height:100vh" id="destinations">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata"  aria-label="India travel destinations video" poster="images/hero_place2.jpeg">
         <source src="videos/5592587-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        <track kind="captions" srclang="en" src="videos/captions.vtt" label="English captions" />
 
       </video>
       <div class="hero-content">
@@ -57,18 +59,18 @@
           <button class="tab-btn" data-filter="luxury" type="button">Luxury</button>
         </div>
         <div class="dest-grid">
-          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="images/andaman.webp" alt="Andaman Islands" /><div class="destination-info"><h3>Andaman</h3><p>Clear blue island escape</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="images/varanasi.webp" alt="Varanasi ghats" /><div class="destination-info"><h3>Varanasi</h3><p>Timeless riverside culture</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="images/ladakh.webp" alt="Ladakh mountains" /><div class="destination-info"><h3>Ladakh</h3><p>High-altitude nature routes</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="images/udaipur.webp" alt="Udaipur palace" /><div class="destination-info"><h3>Udaipur</h3><p>Lake palace luxury</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="images/goa.webp" alt="Goa beach" /><div class="destination-info"><h3>Goa</h3><p>Premium coastal stays</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="images/jaipur.webp" alt="Jaipur architecture" /><div class="destination-info"><h3>Jaipur</h3><p>Royal heritage city</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="images/kashmir.webp" alt="Kashmir valley" /><div class="destination-info"><h3>Kashmir</h3><p>Snow valleys and lakes</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="images/kashmir-luxury.webp" alt="Shimla luxury stays" /><div class="destination-info"><h3>Shimla</h3><p>Hill luxury retreat</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="beach"><img loading="lazy" src="images/kovalam.webp" alt="Kovalam beach" /><div class="destination-info"><h3>Kovalam</h3><p>Relaxed seaside charm</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="city"><img loading="lazy" src="images/mumbai.webp" alt="Mumbai skyline" /><div class="destination-info"><h3>Mumbai</h3><p>Modern city pulse</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="nature"><img loading="lazy" src="images/kerala.webp" alt="Kerala backwaters" /><div class="destination-info"><h3>Kerala</h3><p>Backwater nature retreat</p></div></article>
-          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img loading="lazy" src="images/rajasthan.webp" alt="Jodhpur palace" /><div class="destination-info"><h3>Jodhpur</h3><p>Desert royal luxury</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img width="1200" height="800" loading="lazy" src="images/andaman.webp" alt="Andaman Islands" /><div class="destination-info"><h3>Andaman</h3><p>Clear blue island escape</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img width="1200" height="800" loading="lazy" src="images/varanasi.webp" alt="Varanasi ghats" /><div class="destination-info"><h3>Varanasi</h3><p>Timeless riverside culture</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img width="1200" height="800" loading="lazy" src="images/ladakh.webp" alt="Ladakh mountains" /><div class="destination-info"><h3>Ladakh</h3><p>High-altitude nature routes</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img width="1200" height="800" loading="lazy" src="images/udaipur.webp" alt="Udaipur palace" /><div class="destination-info"><h3>Udaipur</h3><p>Lake palace luxury</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img width="1200" height="800" loading="lazy" src="images/goa.webp" alt="Goa beach" /><div class="destination-info"><h3>Goa</h3><p>Premium coastal stays</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img width="1200" height="800" loading="lazy" src="images/jaipur.webp" alt="Jaipur architecture" /><div class="destination-info"><h3>Jaipur</h3><p>Royal heritage city</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img width="1200" height="800" loading="lazy" src="images/kashmir.webp" alt="Kashmir valley" /><div class="destination-info"><h3>Kashmir</h3><p>Snow valleys and lakes</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img width="1200" height="800" loading="lazy" src="images/kashmir-luxury.webp" alt="Shimla luxury stays" /><div class="destination-info"><h3>Shimla</h3><p>Hill luxury retreat</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="beach"><img width="1200" height="800" loading="lazy" src="images/kovalam.webp" alt="Kovalam beach" /><div class="destination-info"><h3>Kovalam</h3><p>Relaxed seaside charm</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="city"><img width="1200" height="800" loading="lazy" src="images/mumbai.webp" alt="Mumbai skyline" /><div class="destination-info"><h3>Mumbai</h3><p>Modern city pulse</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="nature"><img width="1200" height="800" loading="lazy" src="images/kerala.webp" alt="Kerala backwaters" /><div class="destination-info"><h3>Kerala</h3><p>Backwater nature retreat</p></div></article>
+          <article class="destination-card card tilt-card filter-item" data-category="luxury"><img width="1200" height="800" loading="lazy" src="images/rajasthan.webp" alt="Jodhpur palace" /><div class="destination-info"><h3>Jodhpur</h3><p>Desert royal luxury</p></div></article>
         </div>
       </div>
     </section>
@@ -137,6 +139,7 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+    <a class="book-now-float" href="contact.html#contact" aria-label="Book now">Book Now</a>
   <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -144,6 +147,11 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
 

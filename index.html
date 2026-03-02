@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -40,8 +41,9 @@
 
   <main>
     <section class="hero" id="home">
-      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/hero_place.jpeg">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero_place.jpeg">
         <source src="videos/video_20260302_143553_edit.mp4" type="video/mp4" />
+        <track kind="captions" srclang="en" src="videos/captions.vtt" label="English captions" />
       
       </video>
       <div class="hero-content">
@@ -60,16 +62,16 @@
         <h2 class="section-title">Signature Indian Destinations</h2>
         <p class="section-subtitle">Premium Indian escapes from mountains to coastlines, curated with elegant stays and cultural depth.</p>
         <div class="featured-destination-grid">
-          <article class="featured-tile" tabindex="0" data-title="Kashmir" data-desc="Houseboats, alpine valleys, and premium mountain stays." data-image="images/kashmir.webp"><img loading="lazy" decoding="async" src="images/kashmir.webp" alt="Kashmir landscape" /><div class="featured-tile-overlay"><h3>Kashmir</h3><p>Snow valleys and lakeside elegance</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Jaipur" data-desc="Royal palaces, heritage suites, and curated cultural evenings." data-image="images/jaipur.webp"><img loading="lazy" decoding="async" src="images/jaipur.webp" alt="Jaipur city palaces" /><div class="featured-tile-overlay"><h3>Jaipur</h3><p>Royal heritage experiences</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Goa" data-desc="Luxury beach resorts, sunset cruises, and coastal lifestyle." data-image="images/goa.webp"><img loading="lazy" decoding="async" src="images/goa.webp" alt="Goa beach destination" /><div class="featured-tile-overlay"><h3>Goa</h3><p>Premium coastal retreat</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Kerala" data-desc="Backwater houseboats, wellness retreats, and green serenity." data-image="images/kerala.webp"><img loading="lazy" decoding="async" src="images/kerala.webp" alt="Kerala backwaters" /><div class="featured-tile-overlay"><h3>Kerala</h3><p>Backwater wellness escape</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Ladakh" data-desc="High-altitude routes, dramatic views, and adventure luxury." data-image="images/ladakh.webp"><img loading="lazy" decoding="async" src="images/ladakh.webp" alt="Ladakh mountains" /><div class="featured-tile-overlay"><h3>Ladakh</h3><p>High-altitude grandeur</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Varanasi" data-desc="Sacred ghats, river ceremonies, and timeless culture." data-image="images/varanasi.webp"><img loading="lazy" decoding="async" src="images/varanasi.webp" alt="Varanasi ghats" /><div class="featured-tile-overlay"><h3>Varanasi</h3><p>Sacred riverfront heritage</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Udaipur" data-desc="Lake palaces, regal dining, and romantic old-city charm." data-image="images/udaipur.webp"><img loading="lazy" decoding="async" src="images/udaipur.webp" alt="Udaipur lake city" /><div class="featured-tile-overlay"><h3>Udaipur</h3><p>Lake palace romance</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Andaman" data-desc="Clear waters, private islands, and refined beach luxury." data-image="images/andaman.webp"><img loading="lazy" decoding="async" src="images/andaman.webp" alt="Andaman islands" /><div class="featured-tile-overlay"><h3>Andaman</h3><p>Island luxury escape</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Rishikesh" data-desc="Riverfront spirituality, mountain views, and boutique wellness stays." data-image="images/rishikesh.webp"><img loading="lazy" decoding="async" src="images/rishikesh.webp" alt="Rishikesh riverfront" /><div class="featured-tile-overlay"><h3>Rishikesh</h3><p>River and wellness retreat</p></div></article>
-          <article class="featured-tile" tabindex="0" data-title="Meghalaya" data-desc="Cloud forests, waterfalls, and immersive nature escapes." data-image="images/meghalaya.webp"><img loading="lazy" decoding="async" src="images/meghalaya.webp" alt="Meghalaya hills and waterfalls" /><div class="featured-tile-overlay"><h3>Meghalaya</h3><p>Cloud valley escape</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Kashmir" data-desc="Houseboats, alpine valleys, and premium mountain stays." data-image="images/kashmir.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/kashmir.webp" alt="Kashmir landscape" /><div class="featured-tile-overlay"><h3>Kashmir</h3><p>Snow valleys and lakeside elegance</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Jaipur" data-desc="Royal palaces, heritage suites, and curated cultural evenings." data-image="images/jaipur.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/jaipur.webp" alt="Jaipur city palaces" /><div class="featured-tile-overlay"><h3>Jaipur</h3><p>Royal heritage experiences</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Goa" data-desc="Luxury beach resorts, sunset cruises, and coastal lifestyle." data-image="images/goa.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/goa.webp" alt="Goa beach destination" /><div class="featured-tile-overlay"><h3>Goa</h3><p>Premium coastal retreat</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Kerala" data-desc="Backwater houseboats, wellness retreats, and green serenity." data-image="images/kerala.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/kerala.webp" alt="Kerala backwaters" /><div class="featured-tile-overlay"><h3>Kerala</h3><p>Backwater wellness escape</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Ladakh" data-desc="High-altitude routes, dramatic views, and adventure luxury." data-image="images/ladakh.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/ladakh.webp" alt="Ladakh mountains" /><div class="featured-tile-overlay"><h3>Ladakh</h3><p>High-altitude grandeur</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Varanasi" data-desc="Sacred ghats, river ceremonies, and timeless culture." data-image="images/varanasi.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/varanasi.webp" alt="Varanasi ghats" /><div class="featured-tile-overlay"><h3>Varanasi</h3><p>Sacred riverfront heritage</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Udaipur" data-desc="Lake palaces, regal dining, and romantic old-city charm." data-image="images/udaipur.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/udaipur.webp" alt="Udaipur lake city" /><div class="featured-tile-overlay"><h3>Udaipur</h3><p>Lake palace romance</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Andaman" data-desc="Clear waters, private islands, and refined beach luxury." data-image="images/andaman.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/andaman.webp" alt="Andaman islands" /><div class="featured-tile-overlay"><h3>Andaman</h3><p>Island luxury escape</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Rishikesh" data-desc="Riverfront spirituality, mountain views, and boutique wellness stays." data-image="images/rishikesh.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/rishikesh.webp" alt="Rishikesh riverfront" /><div class="featured-tile-overlay"><h3>Rishikesh</h3><p>River and wellness retreat</p></div></article>
+          <article class="featured-tile" tabindex="0" data-title="Meghalaya" data-desc="Cloud forests, waterfalls, and immersive nature escapes." data-image="images/meghalaya.webp"><img width="1200" height="800" loading="lazy" decoding="async" src="images/meghalaya.webp" alt="Meghalaya hills and waterfalls" /><div class="featured-tile-overlay"><h3>Meghalaya</h3><p>Cloud valley escape</p></div></article>
         </div>
       </div>
     </section>
@@ -77,7 +79,7 @@
     <aside class="featured-preview" id="featuredPreview" aria-hidden="true">
       <div class="featured-preview-card" role="dialog" aria-modal="false" aria-label="Destination preview">
         <button class="featured-preview-close" type="button" aria-label="Close preview">x</button>
-        <img class="featured-preview-image" src="" alt="" />
+        <img width="1200" height="800" class="featured-preview-image" src="" alt="" />
         <div class="featured-preview-body">
           <h3 class="featured-preview-title"></h3>
           <p class="featured-preview-desc"></p>
@@ -87,7 +89,7 @@
 
     <section class="section">
       <div class="container about-wrap">
-        <figure class="about-media reveal parallax-layer" data-speed="0.18"><img loading="lazy" src="images/kashmir-luxury.webp" alt="Luxury India travel planning" /></figure>
+        <figure class="about-media reveal parallax-layer" data-speed="0.18"><img width="1200" height="800" loading="lazy" src="images/kashmir-luxury.webp" alt="Luxury India travel planning" /></figure>
         <div class="about-content reveal">
           <p class="kicker">About MTST Travel</p>
           <h2 class="section-title">Indian Travel, Elevated</h2>
@@ -116,9 +118,9 @@
         <p class="kicker">Popular Tour Packages</p>
         <h2 class="section-title">Top Selling Luxury Routes</h2>
         <div class="package-grid">
-          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/kashmir-luxury.webp" alt="Kashmir luxury tour" /><span class="tag-price">Rs 74,999</span></div><div class="card-body"><h3>Kashmir Signature Escape</h3><p>Luxury stays, valley views, and shikara rides.</p><div class="card-meta"><span>6 Days</span><span>4.9/5</span></div></div></article>
-          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/rajasthan.webp" alt="Rajasthan heritage route" /><span class="tag-price">Rs 87,500</span></div><div class="card-body"><h3>Royal Rajasthan Route</h3><p>Jaipur, Udaipur, and Jodhpur heritage stays.</p><div class="card-meta"><span>8 Days</span><span>4.8/5</span></div></div></article>
-          <article class="package-card tilt-card"><div class="media-wrap"><img loading="lazy" src="images/kerala.webp" alt="Kerala backwater tour" /><span class="tag-price">Rs 68,000</span></div><div class="card-body"><h3>Kerala Backwater Retreat</h3><p>Houseboats, Ayurveda, and coastal serenity.</p><div class="card-meta"><span>5 Days</span><span>4.7/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img width="1200" height="800" loading="lazy" src="images/kashmir-luxury.webp" alt="Kashmir luxury tour" /><span class="tag-price">Rs 74,999</span></div><div class="card-body"><h3>Kashmir Signature Escape</h3><p>Luxury stays, valley views, and shikara rides.</p><div class="card-meta"><span>6 Days</span><span>4.9/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img width="1200" height="800" loading="lazy" src="images/rajasthan.webp" alt="Rajasthan heritage route" /><span class="tag-price">Rs 87,500</span></div><div class="card-body"><h3>Royal Rajasthan Route</h3><p>Jaipur, Udaipur, and Jodhpur heritage stays.</p><div class="card-meta"><span>8 Days</span><span>4.8/5</span></div></div></article>
+          <article class="package-card tilt-card"><div class="media-wrap"><img width="1200" height="800" loading="lazy" src="images/kerala.webp" alt="Kerala backwater tour" /><span class="tag-price">Rs 68,000</span></div><div class="card-body"><h3>Kerala Backwater Retreat</h3><p>Houseboats, Ayurveda, and coastal serenity.</p><div class="card-meta"><span>5 Days</span><span>4.7/5</span></div></div></article>
         </div>
       </div>
     </section>
@@ -126,7 +128,7 @@
     <section class="section">
       <div class="container reveal">
         <article class="luxury-banner">
-          <img class="parallax-layer" data-speed="0.24" loading="lazy" src="images/himalaya.webp" alt="Luxury travel in Indian mountains" />
+          <img width="1200" height="800" class="parallax-layer" data-speed="0.24" loading="lazy" src="images/himalaya.webp" alt="Luxury travel in Indian mountains" />
           <div class="luxury-content">
             <p class="kicker" style="color:#fff">Luxury Experiences</p>
             <h2 class="section-title">Crafted Moments Beyond Ordinary Tourism</h2>
@@ -204,9 +206,9 @@
         <p class="kicker">Blog Preview</p>
         <h2 class="section-title">Travel Insights & Inspirations</h2>
         <div class="blog-showcase-grid">
-          <article class="blog-showcase-card tilt-card"><img loading="lazy" src="images/andaman.webp" alt="Andaman travel blog" /><div class="blog-showcase-overlay"><h3>7 Luxury Indian Island Getaways for 2026</h3><p>Discover premium coastal escapes with privacy and style.</p></div></article>
-          <article class="blog-showcase-card tilt-card"><img loading="lazy" src="images/himalaya.webp" alt="Himalayan travel blog" /><div class="blog-showcase-overlay"><h3>How to Plan a Stress-Free North India Tour</h3><p>Simple frameworks for smooth multi-city journeys.</p></div></article>
-          <article class="blog-showcase-card tilt-card"><img loading="lazy" src="images/varanasi.webp" alt="City travel blog in India" /><div class="blog-showcase-overlay"><h3>City Breaks With Five-Star Comfort in India</h3><p>Where culture and comfort meet in iconic Indian cities.</p></div></article>
+          <article class="blog-showcase-card tilt-card"><img width="1200" height="800" loading="lazy" src="images/andaman.webp" alt="Andaman travel blog" /><div class="blog-showcase-overlay"><h3>7 Luxury Indian Island Getaways for 2026</h3><p>Discover premium coastal escapes with privacy and style.</p></div></article>
+          <article class="blog-showcase-card tilt-card"><img width="1200" height="800" loading="lazy" src="images/himalaya.webp" alt="Himalayan travel blog" /><div class="blog-showcase-overlay"><h3>How to Plan a Stress-Free North India Tour</h3><p>Simple frameworks for smooth multi-city journeys.</p></div></article>
+          <article class="blog-showcase-card tilt-card"><img width="1200" height="800" loading="lazy" src="images/varanasi.webp" alt="City travel blog in India" /><div class="blog-showcase-overlay"><h3>City Breaks With Five-Star Comfort in India</h3><p>Where culture and comfort meet in iconic Indian cities.</p></div></article>
         </div>
       </div>
     </section>
@@ -243,6 +245,7 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+    <a class="book-now-float" href="contact.html#contact" aria-label="Book now">Book Now</a>
   <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -250,4 +253,11 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
 

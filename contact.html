@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -35,6 +36,7 @@
     <section class="hero" style="min-height:100vh" id="contact">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero_place4.jpeg" aria-label="Travel consultation and planning video">
         <source src="videos/12165308-hd_1280_720_30fps.mp4" type="video/mp4" />
+        <track kind="captions" srclang="en" src="videos/captions.vtt" label="English captions" />
  
       </video>
       <div class="hero-content">
@@ -114,6 +116,7 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+    <a class="book-now-float" href="contact.html#contact" aria-label="Book now">Book Now</a>
   <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -121,6 +124,11 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
 
