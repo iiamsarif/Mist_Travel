@@ -1629,6 +1629,7 @@ select:focus {
   }
 
   .hero-actions {
+    align-items: center;
     flex-direction: column;
   }
 
