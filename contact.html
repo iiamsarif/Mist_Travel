@@ -26,9 +26,10 @@
         <a href="index.html#home">Home</a>
         <a href="destinations.html#destinations">Destinations</a>
         <a href="tours.html#tours">Tours</a>
+        <a href="schedules.html#schedules">View Schedule</a>
         <a class="active" href="contact.html#contact">Contact</a>
       </nav>
-      <a class="nav-cta" href="contact.html#contact">Plan My Trip</a>
+      <a class="nav-cta" href="contact.html#quick-request">Plan My Trip</a>
     </div>
   </header>
 
@@ -91,6 +92,34 @@
       </div>
     </section>
 
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="container reveal">
+        <p class="kicker"  id="quick-request">Quick Request</p>
+        <h2 class="section-title">Get This Schedule In Your Inbox</h2>
+        <form class="schedule-form" id="scheduleForm">
+          <label class="field-wrap">
+            <span>Name</span>
+            <input class="field" type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label class="field-wrap">
+            <span>Select destination</span>
+            <select name="destination" required>
+              <option value="">Choose a destination</option>
+              <option>Kashmir</option>
+              <option>Ladakh</option>
+              <option>Kerala</option>
+              <option>Rajasthan</option>
+            </select>
+          </label>
+          <label class="field-wrap">
+            <span>Date</span>
+            <input class="field" type="date" name="date" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Submit Request</button>
+        </form>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container reveal">
         <p class="kicker">FAQ</p>
@@ -116,7 +145,7 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-    <a class="book-now-float" href="contact.html#contact" aria-label="Book now">Book Now</a>
+  <a class="book-now-float" href="contact.html#quick-request" aria-label="Book now">Book Now</a>
   <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -124,7 +153,6 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
 
 
 

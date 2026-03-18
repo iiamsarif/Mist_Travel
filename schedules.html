@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View MTST Travel schedules and book premium India tour timings." />
+  <title>Schedules | MTST Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="header-solid">
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="bg-wave wave-1"></span><span class="bg-wave wave-2"></span><span class="bg-shape s1"></span><span class="bg-shape s2"></span><span class="bg-shape s3"></span><canvas class="particle-canvas"></canvas>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html#home">MTST <span>Travel</span></a>
+      <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="destinations.html#destinations">Destinations</a>
+        <a href="tours.html#tours">Tours</a>
+        <a class="active" href="schedules.html#schedules">View Schedule</a>
+        <a href="contact.html#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="contact.html#quick-request">Plan My Trip</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-compact" id="schedules">
+      <div class="schedule-hero">
+        <p class="kicker">Tour Schedules</p>
+        <h1 class="hero-title split-words">Choose Your Next Departure</h1>
+        <p class="hero-subtitle">Browse premium routes, timings, and limited-time offers in a calm blue aesthetic.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html#quick-request">Book Your Trip</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section schedule-section">
+      <div class="container reveal">
+        <div class="schedule-grid">
+          <article class="schedule-card">
+            <div class="schedule-image">
+              <img src="images/kashmir.webp" alt="Kashmir glacier expedition" loading="lazy" />
+              <span class="schedule-offer">17% Off</span>
+            </div>
+            <div class="schedule-body">
+              <div class="schedule-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Kashmir</span>
+                <span><i class="fa-regular fa-clock"></i> 6 Hours</span>
+              </div>
+              <h3>Beginner hike through alpine valleys</h3>
+              <p>Join us on a cinematic journey across high-altitude lakes and serene routes.</p>
+              <div class="schedule-footer">
+                <div class="schedule-price">
+                  <strong>₹ 9,999</strong>
+                  <span class="strike">₹ 12,000</span>
+                </div>
+                <button class="btn btn-primary" type="button">View Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-image">
+              <img src="images/himalaya.webp" alt="Himalayan peak expedition" loading="lazy" />
+              <span class="schedule-offer">17% Off</span>
+            </div>
+            <div class="schedule-body">
+              <div class="schedule-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Ladakh</span>
+                <span><i class="fa-regular fa-clock"></i> 5 Days / 4 Nights</span>
+              </div>
+              <h3>Climb the highest Himalayan viewpoints</h3>
+              <p>Experience crisp mountain air with luxury stays and private guides.</p>
+              <div class="schedule-footer">
+                <div class="schedule-price">
+                  <strong>₹ 29,500</strong>
+                  <span class="strike">₹ 35,000</span>
+                </div>
+                <button class="btn btn-primary" type="button">View Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-image">
+              <img src="images/kerala.webp" alt="Kerala wellness tour" loading="lazy" />
+              <span class="schedule-offer">17% Off</span>
+            </div>
+            <div class="schedule-body">
+              <div class="schedule-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Kerala</span>
+                <span><i class="fa-regular fa-clock"></i> 5 Days / 4 Nights</span>
+              </div>
+              <h3>Backwater wellness retreat across Kerala</h3>
+              <p>Sail through lush canals with curated wellness and dining moments.</p>
+              <div class="schedule-footer">
+                <div class="schedule-price">
+                  <strong>₹ 22,000</strong>
+                  <span class="strike">₹ 26,000</span>
+                </div>
+                <button class="btn btn-primary" type="button">View Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-image">
+              <img src="images/rajasthan.webp" alt="Rajasthan luxury circuit" loading="lazy" />
+              <span class="schedule-offer">17% Off</span>
+            </div>
+            <div class="schedule-body">
+              <div class="schedule-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Rajasthan</span>
+                <span><i class="fa-regular fa-clock"></i> 4 Days / 3 Nights</span>
+              </div>
+              <h3>Royal desert circuit with palace stays</h3>
+              <p>Discover heritage forts and boutique stays with seamless transfers.</p>
+              <div class="schedule-footer">
+                <div class="schedule-price">
+                  <strong>₹ 18,500</strong>
+                  <span class="strike">₹ 22,200</span>
+                </div>
+                <button class="btn btn-primary" type="button">View Details</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section schedule-section">
+      <div class="container reveal">
+        <article class="cta-banner">
+          <div>
+            <p class="kicker">Book Our Trip</p>
+            <h2 class="section-title" style="margin:0">Reserve your favorite schedule with MTST Travel experts</h2>
+          </div>
+          <a class="btn btn-primary" href="contact.html#quick-request">Book Your Trip</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h4>About MTST Travel</h4><p>Premium India tours designed for modern travelers who value trust, comfort, and cinematic experiences.</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="destinations.html#destinations">Destinations</a></li><li><a href="tours.html#tours">Tours</a></li><li><a href="contact.html#contact">Contact</a></li></ul></div>
+      <div><h4>Tours</h4><ul><li><a href="tours.html#tours">Kashmir Signature</a></li><li><a href="tours.html#tours">Rajasthan Royal</a></li><li><a href="tours.html#tours">Kerala Wellness</a></li><li><a href="tours.html#tours">North East Explorer</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>9490053646</li><li>mtstpay@gmail.com</li><li>India Assistance 24/7</li></ul></div>
+      <div><h4>Social</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li><li><a href="#">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom">(c) 2026 MTST Travel. All rights reserved.</div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/9490053646" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <a class="book-now-float" href="contact.html#quick-request" aria-label="Book now">Book Now</a>
+  <button class="back-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
