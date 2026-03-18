@@ -63,6 +63,10 @@ main {
   padding: 96px 0;
 }
 
+#quick-request {
+  scroll-margin-top: 110px;
+}
+
 .container {
   width: min(1180px, 92vw);
   margin: 0 auto;
@@ -136,6 +140,25 @@ main,
   backdrop-filter: blur(16px);
   border-bottom-color: var(--line);
   box-shadow: 0 10px 30px rgba(17, 17, 17, 0.05);
+}
+
+.header-solid .site-header {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(17, 17, 17, 0.05);
+}
+
+.header-solid .brand {
+  color: #0d3b66;
+}
+
+.header-solid .nav-links a {
+  color: #165a99;
+}
+
+.header-solid .nav-links a::after {
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
 }
 
 .nav-wrap {
@@ -229,6 +252,23 @@ main,
   justify-content: center;
   isolation: isolate;
   overflow: hidden;
+}
+
+.hero-compact {
+  min-height: 72vh;
+  background: linear-gradient(140deg, #d9f0ff, #eef8ff 52%, #dfefff);
+}
+
+.schedule-hero {
+  text-align: center;
+  width: min(860px, 90vw);
+  padding: 120px 0 40px;
+  color: #0d3b66;
+}
+
+.hero-compact .hero-title,
+.hero-compact .hero-subtitle {
+  color: #0d3b66;
 }
 
 .hero-video {
@@ -635,6 +675,139 @@ main,
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 20px;
+}
+
+.schedule-section {
+  background: #e8f4ff;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.schedule-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  background: #dff1ff;
+  border: 1px solid rgba(13, 59, 102, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(13, 59, 102, 0.12);
+}
+
+.schedule-image {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.schedule-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.schedule-offer {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #ffd24d;
+  color: #1b1b1b;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.schedule-body {
+  padding: 22px 26px;
+  display: grid;
+  gap: 12px;
+  background: #dff1ff;
+}
+
+.schedule-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  color: #0d3b66;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.schedule-meta i {
+  color: #1a7bdc;
+  margin-right: 6px;
+}
+
+.schedule-body h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0d3b66;
+}
+
+.schedule-body p {
+  margin: 0;
+  color: #4d647d;
+  line-height: 1.6;
+}
+
+.schedule-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.schedule-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: #0d3b66;
+  font-size: 1.05rem;
+}
+
+.schedule-price .strike {
+  color: #7b8fa4;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.schedule-form {
+  margin-top: 24px;
+  padding: 32px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #d7edff, #eef7ff);
+  border: 1px solid rgba(13, 59, 102, 0.18);
+  box-shadow: 0 16px 32px rgba(13, 59, 102, 0.12);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.schedule-form .field-wrap {
+  display: grid;
+  gap: 8px;
+  color: #0d3b66;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.schedule-form .field,
+.schedule-form select {
+  border-radius: 12px;
+  border: 1px solid rgba(13, 59, 102, 0.24);
+  background: #f7fbff;
+}
+
+.schedule-form button {
+  grid-column: 1 / -1;
 }
 
 .blog-showcase-card {
@@ -1397,6 +1570,10 @@ select:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
   .about-wrap {
     grid-template-columns: 1fr;
   }
@@ -1406,7 +1583,7 @@ select:focus {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .site-header.scrolled {
     backdrop-filter: none;
   }
@@ -1551,6 +1728,18 @@ select:focus {
     line-height: 1.25;
   }
 
+  .schedule-card {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-body {
+    padding: 20px;
+  }
+
+  .schedule-form {
+    grid-template-columns: 1fr;
+  }
+
   .card .btn,
   .plan-card .btn,
   .cta-banner .btn,
@@ -1647,14 +1836,11 @@ select:focus {
   .luxury-content {
     padding: 24px;
   }
+
+  .schedule-form {
+    padding: 22px;
+  }
 }
-
-
-
-
-
-
-
 
 
 
