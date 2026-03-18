@@ -405,6 +405,21 @@
     window.addEventListener('resize', resizeCanvas);
   }
 
+  const scheduleForm = doc.querySelector('#scheduleForm');
+  if (scheduleForm) {
+    scheduleForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(scheduleForm);
+      const name = String(formData.get('name') || '').trim();
+      const destination = String(formData.get('destination') || '').trim();
+      const date = String(formData.get('date') || '').trim();
+      const subject = `Schedule Request - ${destination || 'MTST Travel'}`;
+      const bodyText = `Name: ${name}\nDestination: ${destination}\nDate: ${date}`;
+      const body = encodeURIComponent(bodyText);
+      window.location.href = `mailto:mtstpay@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+  }
+
   body.addEventListener('click', (e) => {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
